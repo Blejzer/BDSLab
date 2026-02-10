@@ -1,854 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>BDS Lab | Application development</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet"> 
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/lightbox.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>BDS Lab — Business Decision Systems</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-  <![endif]-->
-  
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="images/favicon.ico">
-</head><!--/head-->
+    <meta name="description" content="BDS Lab designs automation and AI-supported business decision systems for complex and regulated environments.">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: #1a1a1a;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Layout */
+        header, footer {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        footer {
+            border-top: 1px solid #eee;
+            border-bottom: none;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 80px;
+        }
+
+        main {
+            max-width: 1040px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        /* Header */
+        .header-inner {
+            max-width: 1040px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        nav a {
+            margin-left: 24px;
+            text-decoration: none;
+            font-weight: 500;
+            color: #0057ff;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content */
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 60px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            max-width: 760px;
+            font-size: 1.05rem;
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .pillar {
+            border-top: 2px solid #eee;
+            padding-top: 20px;
+        }
+
+        .email a {
+            color: #0057ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .email a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 
 <body>
 
-  <!--.preloader-->
-  <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
-  <!--/.preloader-->
-
-  <header id="home">
-    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="item active" style="background-image: url(images/slider/8-min.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Welcome to <span>BDS</span> Lab</h1>
-            <p class="animated fadeInRightBig">Web Based Applications - Android Applications</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#about-us">About me</a>
-          </div>
-        </div>
-        <div class="item" style="background-image: url(images/slider/7-min.png)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Web based <span>Application</span> Development</h1>
-            <p class="animated fadeInRightBig">Agile - Spring & Java & Thymelef - MEAN</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
-          </div>
-        </div>
-        <div class="item" style="background-image: url(images/slider/9.png)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Great <span>Android</span> Applications</h1>
-            <p class="animated fadeInRightBig">Responsive - Intuitive - Fun - Efficient</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
-          </div>
-        </div>
-      </div>
-      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
-
-      <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
-
-    </div><!--/#home-slider-->
-    <div class="main-nav">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">
-            <h1><img class="img-responsive" src="images/logo5.png" alt="logo"></h1>
-          </a>                    
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="#home">Home</a></li>
-            <li class="scroll"><a href="#services">Development</a></li>
-            <!--<li class="scroll"><a href="#portfolio">Portfolio</a></li>-->
-            <!--<li class="scroll"><a href="#team">Team</a></li>-->
-            <!--<li class="scroll"><a href="#blog">Blog</a></li>-->
-              <li class="scroll"><a href="#about-us">About Me</a></li>
-              <li class="scroll"><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div><!--/#main-nav-->
-  </header><!--/#home-->
-  <section id="services">
-    <div class="container">
-      <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-        <div class="row">
-          <div class="text-center col-sm-8 col-sm-offset-2">
-            <h2>Web Based Application Development</h2>
-            <p>I create beautiful, responsive, modern, and professional application, each tailored to fit the need, but also with enough room for growth, providing you with</p>
-          </div>
-        </div> 
-      </div>
-      <div class="text-center our-services">
-        <div class="row">
-          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="service-icon">
-              <i class="fa fa-flask"></i>
-            </div>
-            <div class="service-info">
-              <h3>Brand Identity</h3>
-              <p>how you want to be perceived by consumers. Your name, logo, tone, tagline, typeface...</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
-            <div class="service-icon">
-              <i class="fa fa-umbrella"></i>
-            </div>
-            <div class="service-info">
-              <h3>Creative Idea</h3>
-              <p>Every task that I undertake, starts and end with sitting down with you, and working it out together</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
-            <div class="service-icon">
-              <i class="fa fa-cloud"></i>
-            </div>
-            <div class="service-info">
-              <h3>Awesome Support</h3>
-              <p>I am here for you. I come to you, and I get there fast. Confidence is something I do not gable with</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
-            <div class="service-icon">
-              <i class="fa fa-coffee"></i>
-            </div>
-            <div class="service-info">
-              <h3>Professional Design</h3>
-              <p>You own your design. I just help you make it look similar to what it looks when you imagine it.</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="750ms">
-            <div class="service-icon">
-              <i class="fa fa-bitbucket"></i>
-            </div>
-            <div class="service-info">
-              <h3>App Development</h3>
-              <p>Functional and intuitive apps is my moto. My products are stylish and work on majority of devices</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="850ms">
-            <div class="service-icon">
-              <i class="fa fa-gift"></i>
-            </div>
-            <div class="service-info">
-              <h3>Clean Code</h3>
-              <p>I write clean, testable code against the infrastructure components of your choice and accomplish any task.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<header>
+    <div class="header-inner">
+        <div class="brand">BDS Lab</div>
+        <nav>
+            <a onclick="navigate('home')">Home</a>
+            <a onclick="navigate('about')">About</a>
+            <a onclick="navigate('contact')">Contact</a>
+        </nav>
     </div>
-  </section><!--/#services-->
+</header>
 
-  <!--<section id="portfolio">-->
-    <!--<div class="container">-->
-      <!--<div class="row">-->
-        <!--<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">-->
-          <!--<h2>Our Portfolio</h2>-->
-          <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>-->
-        <!--</div>-->
-      <!--</div> -->
-    <!--</div>-->
-    <!--<div class="container-fluid">-->
-      <!--<div class="row">-->
-        <!--<div class="col-sm-3">-->
-          <!--<div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">-->
-            <!--<div class="folio-image">-->
-              <!--<img class="img-responsive" src="images/portfolio/1.jpg" alt="">-->
-            <!--</div>-->
-            <!--<div class="overlay">-->
-              <!--<div class="overlay-content">-->
-                <!--<div class="overlay-text">-->
-                  <!--<div class="folio-info">-->
-                    <!--<h3>Time Hours</h3>-->
-                    <!--<p>Design, Photography</p>-->
-                  <!--</div>-->
-                  <!--<div class="folio-overview">-->
-                    <!--<span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>-->
-                    <!--<span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-sm-3">-->
-          <!--<div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">-->
-            <!--<div class="folio-image">-->
-              <!--<img class="img-responsive" src="images/portfolio/2.jpg" alt="">-->
-            <!--</div>-->
-            <!--<div class="overlay">-->
-              <!--<div class="overlay-content">-->
-                <!--<div class="overlay-text">-->
-                  <!--<div class="folio-info">-->
-                    <!--<h3>Time Hours</h3>-->
-                    <!--<p>Design, Photography</p>-->
-                  <!--</div>-->
-                  <!--<div class="folio-overview">-->
-                    <!--<span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>-->
-                    <!--<span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-sm-3">-->
-          <!--<div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">-->
-            <!--<div class="folio-image">-->
-              <!--<img class="img-responsive" src="images/portfolio/3.jpg" alt="">-->
-            <!--</div>-->
-            <!--<div class="overlay">-->
-              <!--<div class="overlay-content">-->
-                <!--<div class="overlay-text">-->
-                  <!--<div class="folio-info">-->
-                    <!--<h3>Time Hours</h3>-->
-                    <!--<p>Design, Photography</p>-->
-                  <!--</div>-->
-                  <!--<div class="folio-overview">-->
-                    <!--<span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>-->
-                    <!--<span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-sm-3">-->
-          <!--<div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">-->
-            <!--<div class="folio-image">-->
-              <!--<img class="img-responsive" src="images/portfolio/4.jpg" alt="">-->
-            <!--</div>-->
-            <!--<div class="overlay">-->
-              <!--<div class="overlay-content">-->
-                <!--<div class="overlay-text">-->
-                  <!--<div class="folio-info">-->
-                    <!--<h3>Time Hours</h3>-->
-                    <!--<p>Design, Photography</p>-->
-                  <!--</div>-->
-                  <!--<div class="folio-overview">-->
-                    <!--<span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>-->
-                    <!--<span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-sm-3">-->
-          <!--<div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="700ms">-->
-            <!--<div class="folio-image">-->
-              <!--<img class="img-responsive" src="images/portfolio/5.jpg" alt="">-->
-            <!--</div>-->
-            <!--<div class="overlay">-->
-              <!--<div class="overlay-content">-->
-                <!--<div class="overlay-text">-->
-                  <!--<div class="folio-info">-->
-                    <!--<h3>Time Hours</h3>-->
-                    <!--<p>Design, Photography</p>-->
-                  <!--</div>-->
-                  <!--<div class="folio-overview">-->
-                    <!--<span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>-->
-                    <!--<span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-sm-3">-->
-          <!--<div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="800ms">-->
-            <!--<div class="folio-image">-->
-              <!--<img class="img-responsive" src="images/portfolio/6.jpg" alt="">-->
-            <!--</div>-->
-            <!--<div class="overlay">-->
-              <!--<div class="overlay-content">-->
-                <!--<div class="overlay-text">-->
-                  <!--<div class="folio-info">-->
-                    <!--<h3>Time Hours</h3>-->
-                    <!--<p>Design, Photography</p>-->
-                  <!--</div>-->
-                  <!--<div class="folio-overview">-->
-                    <!--<span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>-->
-                    <!--<span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-sm-3">-->
-          <!--<div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="900ms">-->
-            <!--<div class="folio-image">-->
-              <!--<img class="img-responsive" src="images/portfolio/7.jpg" alt="">-->
-            <!--</div>-->
-            <!--<div class="overlay">-->
-              <!--<div class="overlay-content">-->
-                <!--<div class="overlay-text">-->
-                  <!--<div class="folio-info">-->
-                    <!--<h3>Time Hours</h3>-->
-                    <!--<p>Design, Photography</p>-->
-                  <!--</div>-->
-                  <!--<div class="folio-overview">-->
-                    <!--<span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>-->
-                    <!--<span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-sm-3">-->
-          <!--<div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="1000ms">-->
-            <!--<div class="folio-image">-->
-              <!--<img class="img-responsive" src="images/portfolio/8.jpg" alt="">-->
-            <!--</div>-->
-            <!--<div class="overlay">-->
-              <!--<div class="overlay-content">-->
-                <!--<div class="overlay-text">-->
-                  <!--<div class="folio-info">-->
-                    <!--<h3>Time Hours</h3>-->
-                    <!--<p>Design, Photography</p>-->
-                  <!--</div>-->
-                  <!--<div class="folio-overview">-->
-                    <!--<span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>-->
-                    <!--<span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div id="portfolio-single-wrap">-->
-      <!--<div id="portfolio-single">-->
-      <!--</div>-->
-    <!--</div>&lt;!&ndash; /#portfolio-single-wrap &ndash;&gt;-->
-  <!--</section>&lt;!&ndash;/#portfolio&ndash;&gt;-->
+<main id="app"></main>
 
-  <!--<section id="team">-->
-    <!--<div class="container">-->
-      <!--<div class="row">-->
-        <!--<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">-->
-          <!--<h2>The Team</h2>-->
-          <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="team-members">-->
-        <!--<div class="row">-->
-          <!--<div class="col-sm-3">-->
-            <!--<div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">-->
-              <!--<div class="member-image">-->
-                <!--<img class="img-responsive" src="images/team/1.jpg" alt="">-->
-              <!--</div>-->
-              <!--<div class="member-info">-->
-                <!--<h3>Marian Dixon</h3>-->
-                <!--<h4>CEO &amp; Founder</h4>-->
-                <!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-              <!--</div>-->
-              <!--<div class="social-icons">-->
-                <!--<ul>-->
-                  <!--<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
-                  <!--<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
-                  <!--<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
-                  <!--<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>-->
-                  <!--<li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-sm-3">-->
-            <!--<div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">-->
-              <!--<div class="member-image">-->
-                <!--<img class="img-responsive" src="images/team/2.jpg" alt="">-->
-              <!--</div>-->
-              <!--<div class="member-info">-->
-                <!--<h3>Lawrence Lane</h3>-->
-                <!--<h4>UI/UX Designer</h4>-->
-                <!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-              <!--</div>-->
-              <!--<div class="social-icons">-->
-                <!--<ul>-->
-                  <!--<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
-                  <!--<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
-                  <!--<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
-                  <!--<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>-->
-                  <!--<li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-sm-3">-->
-            <!--<div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">-->
-              <!--<div class="member-image">-->
-                <!--<img class="img-responsive" src="images/team/3.jpg" alt="">-->
-              <!--</div>-->
-              <!--<div class="member-info">-->
-                <!--<h3>Lois Clark</h3>-->
-                <!--<h4>Developer</h4>-->
-                <!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-              <!--</div>-->
-              <!--<div class="social-icons">-->
-                <!--<ul>-->
-                  <!--<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
-                  <!--<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
-                  <!--<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
-                  <!--<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>-->
-                  <!--<li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-sm-3">-->
-            <!--<div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">-->
-              <!--<div class="member-image">-->
-                <!--<img class="img-responsive" src="images/team/4.jpg" alt="">-->
-              <!--</div>-->
-              <!--<div class="member-info">-->
-                <!--<h3>Marian Dixon</h3>-->
-                <!--<h4>Support Manager</h4>-->
-                <!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-              <!--</div>-->
-              <!--<div class="social-icons">-->
-                <!--<ul>-->
-                  <!--<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
-                  <!--<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
-                  <!--<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>-->
-                  <!--<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>-->
-                  <!--<li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>-->
-                <!--</ul>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>            -->
-    <!--</div>-->
-  <!--</section>&lt;!&ndash;/#team&ndash;&gt;-->
+<footer>
+    © 2026 · BDS Lab · Business Decision Systems
+</footer>
 
-  <!--<section id="features" class="parallax">-->
-    <!--<div class="container">-->
-      <!--<div class="row count">-->
-        <!--<div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">-->
-          <!--<i class="fa fa-user"></i>-->
-          <!--<h3 class="timer">4000</h3>-->
-          <!--<p>Happy Clients</p>-->
-        <!--</div>-->
-        <!--<div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">-->
-          <!--<i class="fa fa-desktop"></i>-->
-          <!--<h3 class="timer">200</h3>                    -->
-          <!--<p>Modern Websites</p>-->
-        <!--</div> -->
-        <!--<div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="700ms">-->
-          <!--<i class="fa fa-trophy"></i>-->
-          <!--<h3 class="timer">10</h3>                    -->
-          <!--<p>WINNING AWARDS</p>-->
-        <!--</div> -->
-        <!--<div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="900ms">-->
-          <!--<i class="fa fa-comment-o"></i>                    -->
-          <!--<h3>24/7</h3>-->
-          <!--<p>Fast Support</p>-->
-        <!--</div>                 -->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</section>&lt;!&ndash;/#features&ndash;&gt;-->
+<script>
+    const pages = {
+        home: `
+      <h1>Business Decision Systems</h1>
 
-  <!--<section id="pricing">-->
-    <!--<div class="container">-->
-      <!--<div class="row">-->
-        <!--<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">-->
-          <!--<h2>Pricing Table</h2>-->
-          <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="pricing-table">-->
-        <!--<div class="row">-->
-          <!--<div class="col-sm-3">-->
-            <!--<div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">-->
-              <!--<h3>Basic</h3>-->
-              <!--<div class="price">-->
-                <!--$9<span>/Month</span>                          -->
-              <!--</div>-->
-              <!--<ul>-->
-                <!--<li>Free Setup</li>-->
-                <!--<li>10GB Storage</li>-->
-                <!--<li>100GB Bandwith</li>-->
-                <!--<li>5 Products</li>-->
-              <!--</ul>-->
-              <!--<a href="#" class="btn btn-lg btn-primary">Sign up</a>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-sm-3">-->
-            <!--<div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">-->
-              <!--<h3>Standard</h3>-->
-              <!--<div class="price">-->
-                <!--$19<span>/Month</span>                                -->
-              <!--</div>-->
-              <!--<ul>-->
-                <!--<li>Free Setup</li>-->
-                <!--<li>10GB Storage</li>-->
-                <!--<li>100GB Bandwith</li>-->
-                <!--<li>5 Products</li>-->
-              <!--</ul>-->
-              <!--<a href="#" class="btn btn-lg btn-primary">Sign up</a>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-sm-3">-->
-            <!--<div class="single-table featured wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">-->
-              <!--<h3>Featured</h3>-->
-              <!--<div class="price">-->
-                <!--$29<span>/Month</span>                                -->
-              <!--</div>-->
-              <!--<ul>-->
-                <!--<li>Free Setup</li>-->
-                <!--<li>10GB Storage</li>-->
-                <!--<li>100GB Bandwith</li>-->
-                <!--<li>5 Products</li>-->
-              <!--</ul>-->
-              <!--<a href="#" class="btn btn-lg btn-primary">Sign up</a>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-sm-3">-->
-            <!--<div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">-->
-              <!--<h3>Professional</h3>-->
-              <!--<div class="price">-->
-                <!--$49<span>/Month</span>                    -->
-              <!--</div>-->
-              <!--<ul>-->
-                <!--<li>Free Setup</li>-->
-                <!--<li>10GB Storage</li>-->
-                <!--<li>100GB Bandwith</li>-->
-                <!--<li>5 Products</li>-->
-              <!--</ul>-->
-              <!--<a href="#" class="btn btn-lg btn-primary">Sign up</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</section>&lt;!&ndash;/#pricing&ndash;&gt;-->
+      <p>
+        BDS Lab designs and advises on automation and AI-supported decision systems
+        for organizations operating in complex, regulated, and high-responsibility environments.
+      </p>
 
-  <!--<section id="twitter" class="parallax">-->
-    <!--<div>-->
-      <!--<a class="twitter-left-control" href="#twitter-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>-->
-      <!--<a class="twitter-right-control" href="#twitter-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>-->
-      <!--<div class="container">-->
-        <!--<div class="row">-->
-          <!--<div class="col-sm-8 col-sm-offset-2">-->
-            <!--<div class="twitter-icon text-center">-->
-              <!--<i class="fa fa-twitter"></i>-->
-              <!--<h4>Themeum</h4>-->
-            <!--</div>-->
-            <!--<div id="twitter-carousel" class="carousel slide" data-ride="carousel">-->
-              <!--<div class="carousel-inner">-->
-                <!--<div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">-->
-                  <!--<p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>-->
-                <!--</div>-->
-                <!--<div class="item">-->
-                  <!--<p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>-->
-                <!--</div>-->
-                <!--<div class="item">                                -->
-                  <!--<p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>-->
-                <!--</div>-->
-              <!--</div>                        -->
-            <!--</div>                    -->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</section>&lt;!&ndash;/#twitter&ndash;&gt;-->
+      <p>
+        We focus on strengthening decision-making through well-designed systems,
+        clear responsibilities, and explainable logic — not black-box automation.
+      </p>
 
-  <!--<section id="blog">-->
-    <!--<div class="container">-->
-      <!--<div class="row">-->
-        <!--<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">-->
-          <!--<h2>Blog Posts</h2>-->
-          <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="blog-posts">-->
-        <!--<div class="row">-->
-          <!--<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">-->
-            <!--<div class="post-thumb">-->
-              <!--<a href="#"><img class="img-responsive" src="images/blog/1.jpg" alt=""></a> -->
-              <!--<div class="post-meta">-->
-                <!--<span><i class="fa fa-comments-o"></i> 3 Comments</span>-->
-                <!--<span><i class="fa fa-heart"></i> 0 Likes</span> -->
-              <!--</div>-->
-              <!--<div class="post-icon">-->
-                <!--<i class="fa fa-pencil"></i>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="entry-header">-->
-              <!--<h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>-->
-              <!--<span class="date">June 26, 2014</span>-->
-              <!--<span class="cetagory">in <strong>Photography</strong></span>-->
-            <!--</div>-->
-            <!--<div class="entry-content">-->
-              <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">-->
-            <!--<div class="post-thumb">-->
-              <!--<div id="post-carousel"  class="carousel slide" data-ride="carousel">-->
-                <!--<ol class="carousel-indicators">-->
-                  <!--<li data-target="#post-carousel" data-slide-to="0" class="active"></li>-->
-                  <!--<li data-target="#post-carousel" data-slide-to="1"></li>-->
-                  <!--<li data-target="#post-carousel" data-slide-to="2"></li>-->
-                <!--</ol>-->
-                <!--<div class="carousel-inner">-->
-                  <!--<div class="item active">-->
-                    <!--<a href="#"><img class="img-responsive" src="images/blog/2.jpg" alt=""></a>-->
-                  <!--</div>-->
-                  <!--<div class="item">-->
-                    <!--<a href="#"><img class="img-responsive" src="images/blog/1.jpg" alt=""></a>-->
-                  <!--</div>-->
-                  <!--<div class="item">-->
-                    <!--<a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>-->
-                  <!--</div>-->
-                <!--</div>                               -->
-                <!--<a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>-->
-                <!--<a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>-->
-              <!--</div>                            -->
-              <!--<div class="post-meta">-->
-                <!--<span><i class="fa fa-comments-o"></i> 3 Comments</span>-->
-                <!--<span><i class="fa fa-heart"></i> 0 Likes</span> -->
-              <!--</div>-->
-              <!--<div class="post-icon">-->
-                <!--<i class="fa fa-picture-o"></i>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="entry-header">-->
-              <!--<h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>-->
-              <!--<span class="date">June 26, 2014</span>-->
-              <!--<span class="cetagory">in <strong>Photography</strong></span>-->
-            <!--</div>-->
-            <!--<div class="entry-content">-->
-              <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">-->
-            <!--<div class="post-thumb">-->
-              <!--<a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>-->
-              <!--<div class="post-meta">-->
-                <!--<span><i class="fa fa-comments-o"></i> 3 Comments</span>-->
-                <!--<span><i class="fa fa-heart"></i> 0 Likes</span> -->
-              <!--</div>-->
-              <!--<div class="post-icon">-->
-                <!--<i class="fa fa-video-camera"></i>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="entry-header">-->
-              <!--<h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>-->
-              <!--<span class="date">June 26, 2014</span>-->
-              <!--<span class="cetagory">in <strong>Photography</strong></span>-->
-            <!--</div>-->
-            <!--<div class="entry-content">-->
-              <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>-->
-            <!--</div>-->
-          <!--</div>                    -->
-        <!--</div>-->
-        <!--<div class="load-more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">-->
-          <!--<a href="#" class="btn-loadmore"><i class="fa fa-repeat"></i> Load More</a>-->
-        <!--</div>                -->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</section>&lt;!&ndash;/#blog&ndash;&gt;-->
+      <h2>What We Work On</h2>
 
-  <section id="about-us" class="parallax">
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-6">
-                  <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                      <br><br>
-                      <h2>About me</h2>
-                      <br><p>My main focus is development of products that are based on the Spring Framework, using MVC, JPA and Security modules. When client requires robust system, that can handle, process, and produce results from big data, with security in focus, this is what I suggest. Front end for these applications is made using Thymeleaf</p>
-                      <br><p>SPA are something that I've been playing around with ever since, and just recently realized that I am good enough and serious enough about it, to offer it to my clients. MEAN (MongoDB, Express.js, AngularJS, Node.js) offer everything one could need for fancy, presentations.</p>
-                      <br><p>All of the web based applications are prettified and meet demanding HTML5 standard, using Bootstrap, Font Awesome, and other customized sources.</p>
-                      <br><p>I have a quiet group of friends that love productivity and dislike procrastinators in us. So we help each other, every day, to keep them tucked safely under the blankets, so we can do stuff we love. </p>
-                      <br><p>Oh, and just for fun, all of the shiny dots on our beautiful planet you see in the background, are places where you live. Event the tiniest ones. My clients and friends. So, those dots are the places where I am too. Thank you... </p>
-                  </div>
-              </div>
-              <div class="col-sm-6">
-                  <!--<div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">-->
-                      <!--<div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">-->
-                          <!--<p class="lead">User Experiances</p>-->
-                          <!--<div class="progress">-->
-                              <!--<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="95">95%</div>-->
-                          <!--</div>-->
-                      <!--</div>-->
-                      <!--<div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">-->
-                          <!--<p class="lead">Web Design</p>-->
-                          <!--<div class="progress">-->
-                              <!--<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="75">75%</div>-->
-                          <!--</div>-->
-                      <!--</div>-->
-                      <!--<div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">-->
-                          <!--<p class="lead">Programming</p>-->
-                          <!--<div class="progress">-->
-                              <!--<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="60">60%</div>-->
-                          <!--</div>-->
-                      <!--</div>-->
-                      <!--<div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
-                          <!--<p class="lead">Fun</p>-->
-                          <!--<div class="progress">-->
-                              <!--<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="85">85%</div>-->
-                          <!--</div>-->
-                      <!--</div>-->
-                  <!--</div>-->
-              </div>
-          </div>
-      </div>
-  </section><!--/#about-us-->
-
-  <section id="contact">
-    <div id="google-map" class="wow fadeIn" data-latitude="43.871001" data-longitude="18.421352" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
-    <div id="contact-us" class="parallax">
-      <div class="container">
-        <div class="row">
-          <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>Contact Us</h2>
-            <p>I provide you with provide global presence, so it would be kinda silly if you would need to look for me behind some office number...</p>
-          </div>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Decision Support Systems</h3>
+          <p>
+            Analytical and AI-assisted tools that support human judgment,
+            accountability, and governance.
+          </p>
         </div>
-        <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
-          <div class="row">
-            <div class="col-sm-6">
-              <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
-                <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input type="text" name="name" class="form-control" placeholder="Name" required="required">
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input type="email" name="email" class="form-control" placeholder="Email Address" required="required">
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
-                </div>
-                <div class="form-group">
-                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your message" required="required"></textarea>
-                </div>                        
-                <div class="form-group">
-                  <button type="submit" class="btn-submit">Send Now</button>
-                </div>
-              </form>   
-            </div>
-            <div class="col-sm-6">
-              <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <p>Still, if you want to pay me a visit, you are more than welcome. Give me a call, viber, etc... or just show up at the front door. :D</p>
-                <ul class="address">
-                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> Aleja Bosne Srebrene bb </li>
-                  <li><i class="fa fa-phone"></i> <span> Phone:</span> ++387 65 318 453  </li>
-                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:nikola.kujaca@gmail.com"> contact@bdslab.info</a></li>
-                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.bdslab.info</a></li>
-                </ul>
-              </div>                            
-            </div>
-          </div>
+
+        <div class="pillar">
+          <h3>Applied Automation</h3>
+          <p>
+            Hybrid human–machine systems and process automation
+            that improve efficiency without disrupting operations.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <h3>Phased & Safe Adoption</h3>
+          <p>
+            Incremental approaches that reduce risk,
+            support compliance, and allow capabilities to mature over time.
+          </p>
         </div>
       </div>
-    </div>        
-  </section><!--/#contact-->
-  <footer id="footer">
-    <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-      <div class="container text-center">
-        <div class="footer-logo">
-          <a href="index.html"><img class="img-responsive" src="images/logo4.png" alt=""></a>
-        </div>
-        <div class="social-icons">
-          <ul>
-            <li><a class="envelope" href="mailto:nikola.kujaca@gmail.com"><i class="fa fa-envelope"></i></a></li>
-            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> 
-            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a class="tumblr" href="#"><i class="fa fa-phone-square"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <p>&copy; 2017 BDS Lab.</p>
-          </div>
-          <div class="col-sm-6">
-            <p class="pull-right">Designed by <a href="http://www.bdslab.info/">BDS Lab</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    `,
 
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/jquery.inview.min.js"></script>
-  <script>
-      //Google Map
-      var latitude = $('#google-map').data('latitude')
-      var longitude = $('#google-map').data('longitude')
-      function initialize_map() {
-          var myLatlng = new google.maps.LatLng(latitude,longitude);
-          var mapOptions = {
-              zoom: 12,
-              scrollwheel: false,
-              center: myLatlng
-          };
-          var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-          var contentString = '';
-          var infowindow = new google.maps.InfoWindow({
-              content: '<div class="map-content"><ul class="address">' + $('.address').html() + '</ul></div>'
-          });
-          var marker = new google.maps.Marker({
-              position: myLatlng,
-              map: map
-          });
-          google.maps.event.addListener(marker, 'click', function() {
-              infowindow.open(map,marker);
-          });
-      }
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIoRf5cCAAL-mcx1XWuLTbDXznoQ05zfE&callback=initialize_map" type="text/javascript"></script>
-  <script type="text/javascript" src="js/wow.min.js"></script>
-  <script type="text/javascript" src="js/mousescroll.js"></script>
-  <script type="text/javascript" src="js/smoothscroll.js"></script>
-  <script type="text/javascript" src="js/jquery.countTo.js"></script>
-  <script type="text/javascript" src="js/lightbox.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        about: `
+      <h1>About BDS Lab</h1>
 
-      ga('create', 'UA-17888622-5', 'auto');
-      ga('send', 'pageview');
+      <p>
+        BDS Lab is a newly established organization built on years of hands-on experience
+        in the analysis and implementation of automation and AI-supported systems.
+      </p>
 
-  </script>
+      <p>
+        While the company itself is new, its work is grounded in more than five years of
+        practical involvement in designing, deploying, and advising on analytical and AI tools
+        in real operational environments.
+      </p>
+
+      <p>
+        Our background spans decision support systems, applied analytics,
+        and phased automation, with a strong emphasis on accountability and governance.
+      </p>
+    `,
+
+        contact: `
+      <h1>Contact</h1>
+
+      <p>
+        For inquiries related to automation, analytics, or AI-supported decision systems,
+        feel free to get in touch.
+      </p>
+
+      <p class="email">
+        Email: <a href="mailto:nikola@bdslab.info">nikola@bdslab.info</a>
+      </p>
+    `
+    };
+
+    function navigate(page) {
+        document.getElementById('app').innerHTML = pages[page];
+        window.location.hash = page;
+    }
+
+    // Initial load
+    const initialPage = window.location.hash.replace('#', '') || 'home';
+    navigate(initialPage);
+</script>
 
 </body>
 </html>
