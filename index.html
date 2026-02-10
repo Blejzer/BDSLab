@@ -6,101 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="BDS Lab designs automation and AI-supported business decision systems for complex and regulated environments.">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            color: #1a1a1a;
-            background: #ffffff;
-            line-height: 1.6;
-        }
-
-        /* Layout */
-        header, footer {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-
-        footer {
-            border-top: 1px solid #eee;
-            border-bottom: none;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 80px;
-        }
-
-        main {
-            max-width: 1040px;
-            margin: auto;
-            padding: 80px 20px;
-        }
-
-        /* Header */
-        .header-inner {
-            max-width: 1040px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand {
-            font-weight: 600;
-            letter-spacing: 0.04em;
-        }
-
-        nav a {
-            margin-left: 24px;
-            text-decoration: none;
-            font-weight: 500;
-            color: #0057ff;
-            cursor: pointer;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Content */
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            margin-top: 60px;
-            font-size: 1.5rem;
-        }
-
-        p {
-            max-width: 760px;
-            font-size: 1.05rem;
-        }
-
-        .pillars {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .pillar {
-            border-top: 2px solid #eee;
-            padding-top: 20px;
-        }
-
-        .email a {
-            color: #0057ff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .email a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -109,9 +15,9 @@
     <div class="header-inner">
         <div class="brand">BDS Lab</div>
         <nav>
-            <a onclick="navigate('home')">Home</a>
-            <a onclick="navigate('about')">About</a>
-            <a onclick="navigate('contact')">Contact</a>
+            <a href="#home" data-page="home">Home</a>
+            <a href="#about" data-page="about">About</a>
+            <a href="#contact" data-page="contact">Contact</a>
         </nav>
     </div>
 </header>
@@ -122,93 +28,7 @@
     © 2026 · BDS Lab · Business Decision Systems
 </footer>
 
-<script>
-    const pages = {
-        home: `
-      <h1>Business Decision Systems</h1>
-
-      <p>
-        BDS Lab designs and advises on automation and AI-supported decision systems
-        for organizations operating in complex, regulated, and high-responsibility environments.
-      </p>
-
-      <p>
-        We focus on strengthening decision-making through well-designed systems,
-        clear responsibilities, and explainable logic — not black-box automation.
-      </p>
-
-      <h2>What We Work On</h2>
-
-      <div class="pillars">
-        <div class="pillar">
-          <h3>Decision Support Systems</h3>
-          <p>
-            Analytical and AI-assisted tools that support human judgment,
-            accountability, and governance.
-          </p>
-        </div>
-
-        <div class="pillar">
-          <h3>Applied Automation</h3>
-          <p>
-            Hybrid human–machine systems and process automation
-            that improve efficiency without disrupting operations.
-          </p>
-        </div>
-
-        <div class="pillar">
-          <h3>Phased & Safe Adoption</h3>
-          <p>
-            Incremental approaches that reduce risk,
-            support compliance, and allow capabilities to mature over time.
-          </p>
-        </div>
-      </div>
-    `,
-
-        about: `
-      <h1>About BDS Lab</h1>
-
-      <p>
-        BDS Lab is a newly established organization built on years of hands-on experience
-        in the analysis and implementation of automation and AI-supported systems.
-      </p>
-
-      <p>
-        While the company itself is new, its work is grounded in more than five years of
-        practical involvement in designing, deploying, and advising on analytical and AI tools
-        in real operational environments.
-      </p>
-
-      <p>
-        Our background spans decision support systems, applied analytics,
-        and phased automation, with a strong emphasis on accountability and governance.
-      </p>
-    `,
-
-        contact: `
-      <h1>Contact</h1>
-
-      <p>
-        For inquiries related to automation, analytics, or AI-supported decision systems,
-        feel free to get in touch.
-      </p>
-
-      <p class="email">
-        Email: <a href="mailto:nikola@bdslab.info">nikola@bdslab.info</a>
-      </p>
-    `
-    };
-
-    function navigate(page) {
-        document.getElementById('app').innerHTML = pages[page];
-        window.location.hash = page;
-    }
-
-    // Initial load
-    const initialPage = window.location.hash.replace('#', '') || 'home';
-    navigate(initialPage);
-</script>
-
+<script src="js/pages.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
