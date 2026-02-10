@@ -7,6 +7,38 @@ body {
 }
 
 /* Layout */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #F7F9FB;
+}
+
+.logo {
+    height: 32px;
+    width: auto;
+}
+
+@media (max-width: 640px) {
+    .logo {
+        height: 28px;
+    }
+}
+
+nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #0B1F33;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #2FC4FF;
+}
+
+
+
 header,
 footer {
     padding: 20px;
