@@ -108,39 +108,75 @@ function setupContactForm() {
     form.addEventListener('submit', handleContactFormSubmit);
 }
 
-function navigate(page) {
-    document.getElementById('app').innerHTML = getPageTemplate(page, currentLanguage);
-    window.location.hash = page;
+function renderSections() {
+    const sectionNodes = document.querySelectorAll('[data-section-content]');
+
+    sectionNodes.forEach((node) => {
+        const sectionName = node.dataset.sectionContent;
+        node.innerHTML = getSectionTemplate(sectionName, currentLanguage);
+    });
+
     setupContactForm();
 }
 
-function handleNavigationClick(event) {
-    const target = event.target.closest('[data-page]');
+function setActiveNavByHash(hash) {
+    const activeHash = hash || '#home';
+    const navLinks = document.querySelectorAll('nav a');
 
-    if (!target) {
-        return;
-    }
+    navLinks.forEach((link) => {
+        const isActive = link.getAttribute('href') === activeHash;
+        link.classList.toggle('is-active', isActive);
+    });
+}
 
-    event.preventDefault();
-    navigate(target.dataset.page);
+function setupSectionObserver() {
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            entry.target.classList.add('visible');
+
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach((link) => {
+                link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+            });
+        });
+    }, { threshold: 0.3 });
+
+    sections.forEach((section) => observer.observe(section));
+}
+
+function setupScrolledNavState() {
+    const nav = document.getElementById('site-nav');
+
+    const toggleNavState = () => {
+        nav.classList.toggle('scrolled', window.scrollY > 24);
+    };
+
+    toggleNavState();
+    window.addEventListener('scroll', toggleNavState, { passive: true });
 }
 
 function handleLanguageChange(event) {
     currentLanguage = event.target.value;
     updateNavigationLabels();
     updateLanguageDropdown();
-
-    const currentPage = window.location.hash.replace('#', '') || 'home';
-    navigate(currentPage);
+    renderSections();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('nav').addEventListener('click', handleNavigationClick);
     document.getElementById('language-select').addEventListener('change', handleLanguageChange);
-
-    const initialPage = window.location.hash.replace('#', '') || 'home';
 
     updateNavigationLabels();
     updateLanguageDropdown();
-    navigate(initialPage);
+    renderSections();
+    setupSectionObserver();
+    setupScrolledNavState();
+
+    setActiveNavByHash(window.location.hash);
 });
