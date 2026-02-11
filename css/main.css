@@ -187,14 +187,22 @@ p {
     padding-left: 34px;
 }
 
+.location-list .address-card h3 {
+    margin: 0 0 6px;
+}
+
 .location-list .address-card::before {
     content: '';
     position: absolute;
-    top: 14px;
+    top: 12px;
     left: 0;
     width: 20px;
     height: 20px;
     background: url('../images/bdslab-grid.svg') no-repeat center / contain;
+}
+
+.location-list .address-card p {
+    margin: 4px 0;
 }
 
 .email a,
