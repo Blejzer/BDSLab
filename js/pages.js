@@ -1,6 +1,8 @@
 const translations = {
     en: {
         navHome: 'Home',
+        navAutomation: 'Automation & Robotics',
+        navAiTools: 'AI Tools',
         navAbout: 'About',
         navContact: 'Contact',
         homeTitle: 'Business Decision Systems',
@@ -13,6 +15,18 @@ const translations = {
         homePillarTwoBody: 'Hybrid human–machine systems and process automation that improve efficiency without disrupting operations.',
         homePillarThreeTitle: 'Phased & Safe Adoption',
         homePillarThreeBody: 'Incremental approaches that reduce risk, support compliance, and allow capabilities to mature over time.',
+        homePracticeTitle: 'Automation, Robotics & AI in Practice',
+        homePracticeBodyOne: 'Automation and robotics are not confined to manufacturing floors. They can support retail environments, regulated operations, service industries, logistics, food handling, customs processing, compliance workflows, and digital investigations. When designed correctly, they reduce repetitive labor, increase consistency, and introduce structured control without removing human oversight.',
+        homePracticeBodyTwo: 'Artificial intelligence tools expand these possibilities even further. From anomaly detection and risk scoring to workflow optimization and decision support, AI can enhance both physical and digital systems. The key is not maximal automation — it is controlled, phased integration that strengthens accountability and transparency.',
+        homePracticeBodyThree: 'At BDS Lab, we focus on applied automation and AI systems that operate within clearly defined responsibilities, predictable behavior, and measurable outcomes.',
+        automationTitle: 'Automation & Robotics',
+        automationBodyOne: 'Modern automation is no longer about replacing people — it is about structuring repetitive, risk-prone, or precision-sensitive tasks so that humans can focus on oversight, quality, and decision-making. Properly designed robotic systems operate within defined mechanical and logical boundaries, ensuring deterministic and repeatable behavior.',
+        automationBodyTwo: 'Our approach emphasizes hybrid human–robot architectures. Responsibilities are clearly separated: dispensing vs. aggregation, control vs. execution, oversight vs. action. This reduces regulatory risk, simplifies certification, and improves operational reliability. Systems are designed to function with or without full automation, preventing single points of failure.',
+        automationBodyThree: 'Applications range from structured retail automation and food-handling robotics to controlled material flow systems and service-environment automation. The objective is always the same: reduce labor intensity while preserving quality, traceability, and safety.',
+        aiToolsTitle: 'AI Tools',
+        aiToolsBodyOne: 'Artificial intelligence is most valuable when it augments structured processes rather than replaces them. We focus on AI as a decision-support layer — not a black-box replacement for human reasoning. Systems must be explainable, auditable, and aligned with operational governance.',
+        aiToolsBodyTwo: 'AI tools can support anomaly detection, risk profiling, predictive modeling, workflow optimization, and structured data interpretation. Whether applied to customs risk management, compliance systems, retail demand forecasting, or service automation, AI must operate within predefined logical boundaries.',
+        aiToolsBodyThree: 'Our methodology emphasizes phased deployment. First: structured data and process clarity. Second: analytical tooling. Third: machine learning where justified by data quality and measurable impact. This ensures sustainable, low-risk adoption rather than experimental overreach.',
         aboutTitle: 'About BDS Lab',
         aboutBodyOne: 'BDS Lab is a newly established organization built on years of hands-on experience in the analysis and implementation of automation and AI-supported systems.',
         aboutBodyTwo: 'While the company itself is new, its work is grounded in more than five years of practical involvement in designing, deploying, and advising on analytical and AI tools in real operational environments.',
@@ -42,6 +56,8 @@ const translations = {
     },
     hr: {
         navHome: 'Početna',
+        navAutomation: 'Automatizacija i robotika',
+        navAiTools: 'AI alati',
         navAbout: 'O nama',
         navContact: 'Kontakt',
         homeTitle: 'Sustavi poslovnog odlučivanja',
@@ -54,6 +70,18 @@ const translations = {
         homePillarTwoBody: 'Hibridni sustavi čovjek–stroj i automatizacija procesa koji povećavaju učinkovitost bez narušavanja operativnog rada.',
         homePillarThreeTitle: 'Fazno i sigurno uvođenje',
         homePillarThreeBody: 'Postupni pristupi koji smanjuju rizik, podupiru usklađenost i omogućuju sazrijevanje sposobnosti kroz vrijeme.',
+        homePracticeTitle: 'Automatizacija, robotika i AI u praksi',
+        homePracticeBodyOne: 'Automatizacija i robotika nisu ograničene samo na proizvodne pogone. Mogu podržati maloprodajna okruženja, regulirane operacije, uslužne djelatnosti, logistiku, rukovanje hranom, carinsku obradu, tijekove usklađenosti i digitalne istrage. Kada su pravilno dizajnirane, smanjuju repetitivan rad, povećavaju dosljednost i uvode strukturiranu kontrolu bez uklanjanja ljudskog nadzora.',
+        homePracticeBodyTwo: 'Alati umjetne inteligencije dodatno proširuju te mogućnosti. Od otkrivanja anomalija i procjene rizika do optimizacije tijeka rada i podrške odlučivanju, AI može unaprijediti i fizičke i digitalne sustave. Ključ nije maksimalna automatizacija — nego kontrolirana, fazna integracija koja jača odgovornost i transparentnost.',
+        homePracticeBodyThree: 'U BDS Labu usmjereni smo na primijenjene sustave automatizacije i AI-a koji djeluju unutar jasno definiranih odgovornosti, predvidljivog ponašanja i mjerljivih rezultata.',
+        automationTitle: 'Automatizacija i robotika',
+        automationBodyOne: 'Suvremena automatizacija više nije usmjerena na zamjenu ljudi — već na strukturiranje repetitivnih, rizičnih ili precizno osjetljivih zadataka kako bi se ljudi mogli usredotočiti na nadzor, kvalitetu i donošenje odluka. Pravilno projektirani robotski sustavi djeluju unutar definiranih mehaničkih i logičkih granica, osiguravajući determinističko i ponovljivo ponašanje.',
+        automationBodyTwo: 'Naš pristup naglašava hibridne arhitekture čovjek–robot. Odgovornosti su jasno odvojene: izdavanje naspram agregacije, kontrola naspram izvršavanja, nadzor naspram djelovanja. Time se smanjuje regulatorni rizik, pojednostavljuje certificiranje i povećava operativna pouzdanost. Sustavi su projektirani da funkcioniraju sa ili bez potpune automatizacije, čime se izbjegavaju jedinstvene točke kvara.',
+        automationBodyThree: 'Primjene se kreću od strukturirane maloprodajne automatizacije i robotike za rukovanje hranom do sustava kontroliranog toka materijala i automatizacije uslužnih okruženja. Cilj je uvijek isti: smanjiti intenzitet rada uz očuvanje kvalitete, sljedivosti i sigurnosti.',
+        aiToolsTitle: 'AI alati',
+        aiToolsBodyOne: 'Umjetna inteligencija najvrjednija je kada nadopunjuje strukturirane procese, a ne kada ih zamjenjuje. AI promatramo kao sloj za podršku odlučivanju — ne kao netransparentnu zamjenu za ljudsko rasuđivanje. Sustavi moraju biti objašnjivi, auditabilni i usklađeni s operativnim upravljanjem.',
+        aiToolsBodyTwo: 'AI alati mogu podržati otkrivanje anomalija, profiliranje rizika, prediktivno modeliranje, optimizaciju tijeka rada i strukturirano tumačenje podataka. Bilo da se primjenjuju u carinskom upravljanju rizicima, sustavima usklađenosti, prognoziranju potražnje u maloprodaji ili automatizaciji usluga, AI mora djelovati unutar unaprijed definiranih logičkih granica.',
+        aiToolsBodyThree: 'Naša metodologija naglašava fazno uvođenje. Prvo: strukturirani podaci i jasnoća procesa. Drugo: analitički alati. Treće: strojno učenje kada je opravdano kvalitetom podataka i mjerljivim učinkom. Time se osigurava održivo usvajanje s niskim rizikom, umjesto eksperimentalnog pretjerivanja.',
         aboutTitle: 'O BDS Labu',
         aboutBodyOne: 'BDS Lab je novoosnovana organizacija izgrađena na godinama praktičnog iskustva u analizi i implementaciji automatizacijskih i AI-potpomognutih sustava.',
         aboutBodyTwo: 'Iako je tvrtka nova, njezin se rad temelji na više od pet godina praktičnog sudjelovanja u projektiranju, implementaciji i savjetovanju o analitičkim i AI alatima u stvarnim operativnim okruženjima.',
@@ -113,6 +141,34 @@ function getPageTemplate(page, language) {
               <p>${t.homePillarThreeBody}</p>
             </div>
           </div>
+
+          <section class="content-section"> 
+            <h2>${t.homePracticeTitle}</h2>
+            <p>${t.homePracticeBodyOne}</p>
+            <p>${t.homePracticeBodyTwo}</p>
+            <p>${t.homePracticeBodyThree}</p>
+          </section>
+        `,
+
+
+        automation: `
+          <h1><img src="images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.automationTitle}</h1>
+
+          <p>${t.automationBodyOne}</p>
+
+          <p>${t.automationBodyTwo}</p>
+
+          <p>${t.automationBodyThree}</p>
+        `,
+
+        "ai-tools": `
+          <h1><img src="images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.aiToolsTitle}</h1>
+
+          <p>${t.aiToolsBodyOne}</p>
+
+          <p>${t.aiToolsBodyTwo}</p>
+
+          <p>${t.aiToolsBodyThree}</p>
         `,
 
         about: `
