@@ -19,7 +19,26 @@ const translations = {
         aboutBodyThree: 'Our background spans decision support systems, applied analytics, and phased automation, with a strong emphasis on accountability and governance.',
         contactTitle: 'Contact',
         contactBody: 'For inquiries related to automation, analytics, or AI-supported decision systems, feel free to get in touch.',
-        contactEmailLabel: 'Email:'
+        contactEmailLabel: 'Email:',
+        contactLocationsTitle: 'Office Locations',
+        contactAddressBiHTitle: 'Bosnia and Herzegovina',
+        contactAddressBiHStreet: 'Behaudina Selmanovica 1, Sarajevo',
+        contactAddressCroatiaTitle: 'Croatia',
+        contactAddressCroatiaStreet: 'Okucanska 17, Zagreb',
+        contactFormTitle: 'Send us a message',
+        contactNameLabel: 'Full name',
+        contactNamePlaceholder: 'Your name',
+        contactEmailFormLabel: 'Email address',
+        contactEmailPlaceholder: 'you@example.com',
+        contactSubjectLabel: 'Subject',
+        contactSubjectPlaceholder: 'How can we help?',
+        contactMessageLabel: 'Message',
+        contactMessagePlaceholder: 'Tell us about your project or inquiry.',
+        contactSubmit: 'Send message',
+        contactSending: 'Sending…',
+        contactSuccess: 'Thanks for reaching out. Your message has been sent successfully.',
+        contactError: 'Sorry, there was a problem sending your message. Please try again or email us directly.',
+        contactFallback: 'If the problem continues, use your email app with a prefilled draft.'
     },
     hr: {
         navHome: 'Početna',
@@ -41,7 +60,26 @@ const translations = {
         aboutBodyThree: 'Naše iskustvo obuhvaća sustave za podršku odlučivanju, primijenjenu analitiku i faznu automatizaciju, uz snažan naglasak na odgovornosti i upravljanju.',
         contactTitle: 'Kontakt',
         contactBody: 'Za upite vezane uz automatizaciju, analitiku ili AI-potpomognute sustave odlučivanja, slobodno nam se javite.',
-        contactEmailLabel: 'E-pošta:'
+        contactEmailLabel: 'E-pošta:',
+        contactLocationsTitle: 'Lokacije ureda',
+        contactAddressBiHTitle: 'Bosna i Hercegovina',
+        contactAddressBiHStreet: 'Behaudina Selmanovica 1, Sarajevo',
+        contactAddressCroatiaTitle: 'Hrvatska',
+        contactAddressCroatiaStreet: 'Okucanska 17, Zagreb',
+        contactFormTitle: 'Pošaljite nam poruku',
+        contactNameLabel: 'Ime i prezime',
+        contactNamePlaceholder: 'Vaše ime',
+        contactEmailFormLabel: 'Adresa e-pošte',
+        contactEmailPlaceholder: 'vi@primjer.com',
+        contactSubjectLabel: 'Naslov',
+        contactSubjectPlaceholder: 'Kako vam možemo pomoći?',
+        contactMessageLabel: 'Poruka',
+        contactMessagePlaceholder: 'Opišite svoj projekt ili upit.',
+        contactSubmit: 'Pošalji poruku',
+        contactSending: 'Slanje…',
+        contactSuccess: 'Hvala na javljanju. Vaša poruka je uspješno poslana.',
+        contactError: 'Došlo je do pogreške pri slanju poruke. Pokušajte ponovno ili nas kontaktirajte e-poštom.',
+        contactFallback: 'Ako se problem nastavi, upotrijebite svoju e-poštu s unaprijed pripremljenom porukom.'
     }
 };
 
@@ -68,7 +106,7 @@ function getPageTemplate(page, language) {
               <h3>${t.homePillarTwoTitle}</h3>
               <p>${t.homePillarTwoBody}</p>
             </div>
-            
+
 
              <div class="pillar">
               <h3>${t.homePillarThreeTitle}</h3>
@@ -92,10 +130,51 @@ function getPageTemplate(page, language) {
 
           <p>${t.contactBody}</p>
 
-          <p class="email">
-            ${t.contactEmailLabel} <a href="mailto:nikola@bdslab.info">nikola@bdslab.info</a>
-          </p>
-                `
+          <div class="contact-grid">
+            <section class="contact-details" aria-label="${t.contactLocationsTitle}">
+              <p class="email">
+                ${t.contactEmailLabel} <a href="mailto:nikola@bdslab.info">nikola@bdslab.info</a>
+              </p>
+
+              <h2>${t.contactLocationsTitle}</h2>
+
+              <ul class="location-list">
+                <li class="address-card">
+                  <h3>${t.contactAddressBiHTitle}</h3>
+                  <p>${t.contactAddressBiHStreet}</p>
+                  <p><a href="tel:+38765318453">+387 65 318 453</a></p>
+                </li>
+
+                <li class="address-card">
+                  <h3>${t.contactAddressCroatiaTitle}</h3>
+                  <p>${t.contactAddressCroatiaStreet}</p>
+                  <p><a href="tel:+385923598579">+385 92 359 8579</a></p>
+                </li>
+              </ul>
+            </section>
+
+            <section class="contact-form-wrap">
+              <h2>${t.contactFormTitle}</h2>
+
+              <form id="contact-form" novalidate>
+                <label for="name">${t.contactNameLabel}</label>
+                <input id="name" name="name" type="text" placeholder="${t.contactNamePlaceholder}" required autocomplete="name">
+
+                <label for="email">${t.contactEmailFormLabel}</label>
+                <input id="email" name="email" type="email" placeholder="${t.contactEmailPlaceholder}" required autocomplete="email">
+
+                <label for="subject">${t.contactSubjectLabel}</label>
+                <input id="subject" name="subject" type="text" placeholder="${t.contactSubjectPlaceholder}" required>
+
+                <label for="message">${t.contactMessageLabel}</label>
+                <textarea id="message" name="message" rows="5" placeholder="${t.contactMessagePlaceholder}" required></textarea>
+
+                <button type="submit" id="contact-submit-btn">${t.contactSubmit}</button>
+                <p id="contact-form-status" role="status" aria-live="polite"></p>
+              </form>
+            </section>
+          </div>
+        `
     };
 
     return pages[page] || pages.home;
