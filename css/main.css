@@ -109,6 +109,23 @@ nav a.is-active {
 .section-home {
     background: linear-gradient(135deg, #1f5f3f, #2e8b57);
 }
+.section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
 
 .section-automation {
     background: linear-gradient(135deg, #1b4f72, #2fc4ff);
@@ -198,7 +215,7 @@ p {
     left: 0;
     width: 20px;
     height: 20px;
-    background: url('../images/bdslab-grid.svg') no-repeat center / contain;
+    background: url('../multimedia/images/bdslab-grid.svg') no-repeat center / contain;
 }
 
 .location-list .address-card p {

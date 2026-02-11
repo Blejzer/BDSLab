@@ -36,9 +36,9 @@ const translations = {
         contactEmailLabel: 'Email:',
         contactLocationsTitle: 'Office Locations',
         contactAddressBiHTitle: 'Bosnia and Herzegovina',
-        contactAddressBiHStreet: 'Behaudina Selmanovica 1, Sarajevo',
+        contactAddressBiHStreet: 'Behaudina Selmanovića 1, Sarajevo',
         contactAddressCroatiaTitle: 'Croatia',
-        contactAddressCroatiaStreet: 'Okucanska 17, Zagreb',
+        contactAddressCroatiaStreet: 'Okučanska 17, Zagreb',
         contactFormTitle: 'Send us a message',
         contactNameLabel: 'Full name',
         contactNamePlaceholder: 'Your name',
@@ -116,7 +116,7 @@ function getSectionTemplate(section, language) {
 
     const sections = {
         home: `
-          <h1><img src="images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.homeTitle}</h1>
+          <h1><img src="multimedia/images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.homeTitle}</h1>
 
           <p>${t.homeIntroOne}</p>
 
@@ -150,7 +150,7 @@ function getSectionTemplate(section, language) {
         `,
 
         automation: `
-          <h1><img src="images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.automationTitle}</h1>
+          <h1><img src="multimedia/images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.automationTitle}</h1>
 
           <p>${t.automationBodyOne}</p>
 
@@ -160,7 +160,7 @@ function getSectionTemplate(section, language) {
         `,
 
         ai: `
-          <h1><img src="images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.aiToolsTitle}</h1>
+          <h1><img src="multimedia/images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.aiToolsTitle}</h1>
 
           <p>${t.aiToolsBodyOne}</p>
 
@@ -170,7 +170,7 @@ function getSectionTemplate(section, language) {
         `,
 
         about: `
-          <h1><img src="images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.aboutTitle}</h1>
+          <h1><img src="multimedia/images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.aboutTitle}</h1>
 
           <p>${t.aboutBodyOne}</p>
 
@@ -180,7 +180,7 @@ function getSectionTemplate(section, language) {
         `,
 
         contact: `
-          <h1><img src="images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.contactTitle}</h1>
+          <h1><img src="multimedia/images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.contactTitle}</h1>
 
           <p>${t.contactBody}</p>
 
