@@ -111,10 +111,10 @@ const translations = {
     }
 };
 
-function getPageTemplate(page, language) {
+function getSectionTemplate(section, language) {
     const t = translations[language] || translations.en;
 
-    const pages = {
+    const sections = {
         home: `
           <h1><img src="images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.homeTitle}</h1>
 
@@ -135,21 +135,19 @@ function getPageTemplate(page, language) {
               <p>${t.homePillarTwoBody}</p>
             </div>
 
-
-             <div class="pillar">
+            <div class="pillar">
               <h3>${t.homePillarThreeTitle}</h3>
               <p>${t.homePillarThreeBody}</p>
             </div>
           </div>
 
-          <section class="content-section"> 
+          <section class="content-section">
             <h2>${t.homePracticeTitle}</h2>
             <p>${t.homePracticeBodyOne}</p>
             <p>${t.homePracticeBodyTwo}</p>
             <p>${t.homePracticeBodyThree}</p>
           </section>
         `,
-
 
         automation: `
           <h1><img src="images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.automationTitle}</h1>
@@ -161,7 +159,7 @@ function getPageTemplate(page, language) {
           <p>${t.automationBodyThree}</p>
         `,
 
-        "ai-tools": `
+        ai: `
           <h1><img src="images/bdslab-grid.svg" alt="BDS Lab" height="30"> ${t.aiToolsTitle}</h1>
 
           <p>${t.aiToolsBodyOne}</p>
@@ -233,5 +231,5 @@ function getPageTemplate(page, language) {
         `
     };
 
-    return pages[page] || pages.home;
+    return sections[section] || sections.home;
 }
