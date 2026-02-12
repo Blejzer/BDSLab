@@ -162,6 +162,45 @@ function setupScrolledNavState() {
     window.addEventListener('scroll', toggleNavState, { passive: true });
 }
 
+
+function setupMobileMenu() {
+    const navContainer = document.getElementById('site-nav');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelectorAll('.primary-nav a');
+
+    if (!navContainer || !menuToggle) {
+        return;
+    }
+
+    const closeMenu = () => {
+        navContainer.classList.remove('mobile-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    const toggleMenu = () => {
+        const isOpen = navContainer.classList.toggle('mobile-menu-open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    };
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 900) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeMenu();
+        }
+    });
+}
+
 function handleLanguageChange(event) {
     currentLanguage = event.target.value;
     updateNavigationLabels();
@@ -177,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderSections();
     setupSectionObserver();
     setupScrolledNavState();
+    setupMobileMenu();
 
     setActiveNavByHash(window.location.hash);
 });
