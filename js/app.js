@@ -135,18 +135,18 @@ function setupSectionObserver() {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
+            entry.target.classList.toggle('visible', entry.isIntersecting);
+
             if (!entry.isIntersecting) {
                 return;
             }
-
-            entry.target.classList.add('visible');
 
             const id = entry.target.getAttribute('id');
             navLinks.forEach((link) => {
                 link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
             });
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0 });
 
     sections.forEach((section) => observer.observe(section));
 }
