@@ -28,7 +28,8 @@ body {
 }
 
 .section-home {
-    background: linear-gradient(135deg, #f4f4f4, #d7d7d7);
+    /*background: linear-gradient(135deg, #f4f4f4, #d7d7d7);*/
+    background: linear-gradient(135deg, #1b4f72, #2fc4ff);
 }
 
 .section::after {
@@ -43,15 +44,18 @@ body {
 }
 
 .section-ai {
-    background: linear-gradient(135deg, #f4d03f, #f1c40f);
+    /*background: linear-gradient(135deg, #f4d03f, #f1c40f);*/
+    background: linear-gradient(135deg, #1b4f72, #2fc4ff);
 }
 
 .section-about {
-    background: linear-gradient(135deg, #e67e22, #d35400);
+    /*background: linear-gradient(135deg, #e67e22, #d35400);*/
+    background: linear-gradient(135deg, #1b4f72, #2fc4ff);
 }
 
 .section-contact {
-    background: linear-gradient(135deg, #922b21, #c0392b);
+    /*background: linear-gradient(135deg, #922b21, #c0392b);*/
+    background: linear-gradient(135deg, #1b4f72, #2fc4ff);
 }
 
 .section.section-video.section-automation,
@@ -68,15 +72,15 @@ li {
     color: #ffffff;
 }
 
-.section-home h1,
-.section-home h2,
-.section-home h3,
-.section-home p,
-.section-home li,
-.section-home label,
-.section-home a {
-    color: #1b1b1b;
-}
+/*.section-home h1,*/
+/*.section-home h2,*/
+/*.section-home h3,*/
+/*.section-home p,*/
+/*.section-home li,*/
+/*.section-home label,*/
+/*.section-home a {*/
+/*    color: #1b1b1b;*/
+/*}*/
 
 .section-home .pillar,
 .section-home .location-list .address-card {
