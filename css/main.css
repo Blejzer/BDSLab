@@ -115,6 +115,11 @@ nav a.is-active {
     background: transparent;
 }
 
+.section.section-video,
+.section.section-video.visible {
+    transform: none;
+}
+
 .section-video video {
     position: fixed;
     inset: 0;
