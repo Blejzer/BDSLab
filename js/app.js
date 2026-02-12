@@ -135,11 +135,11 @@ function setupSectionObserver() {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
+            entry.target.classList.toggle('visible', entry.isIntersecting);
+
             if (!entry.isIntersecting) {
                 return;
             }
-
-            entry.target.classList.add('visible');
 
             const id = entry.target.getAttribute('id');
             navLinks.forEach((link) => {
