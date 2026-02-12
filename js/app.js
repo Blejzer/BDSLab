@@ -146,7 +146,7 @@ function setupSectionObserver() {
                 link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
             });
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0 });
 
     sections.forEach((section) => observer.observe(section));
 }
