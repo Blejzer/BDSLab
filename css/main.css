@@ -1,68 +1,11 @@
-html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
-}
-
 body {
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     color: #ffffff;
     line-height: 1.6;
     background: #111;
 }
 
-main {
-    position: relative;
-}
-
-.site-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 16px 0;
-    background: rgba(0, 0, 0, 0.18);
-    backdrop-filter: blur(2px);
-    transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
-}
-
-.site-nav.scrolled {
-    background: rgba(0, 0, 0, 0.48);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 0 10%;
-}
-
-.logo {
-    width: auto;
-}
-
-.logo-header {
-    height: 44px;
-}
-
-.logo-footer {
-    height: 40px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
+.primary-nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
@@ -70,13 +13,9 @@ nav a {
     transition: opacity 0.2s ease;
 }
 
-nav a:hover,
-nav a.is-active {
+.primary-nav a:hover,
+.primary-nav a.is-active {
     opacity: 1;
-}
-
-.language-switch {
-    margin-left: auto;
 }
 
 #language-select {
@@ -88,44 +27,8 @@ nav a.is-active {
     padding: 6px 10px;
 }
 
-.section {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 96px 10% 80px;
-    box-sizing: border-box;
-    scroll-snap-align: start;
-}
-
-
 .section-home {
-    background: linear-gradient(135deg, #1f5f3f, #2e8b57);
-}
-
-.section-video {
-    background: transparent;
-}
-
-.section.section-video,
-.section.section-video.visible {
-    transform: none;
-}
-
-.section-video video {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.section-video.visible video {
-    opacity: 1;
+    background: linear-gradient(135deg, #f4f4f4, #d7d7d7);
 }
 
 .section::after {
@@ -156,12 +59,6 @@ nav a.is-active {
     background: transparent;
 }
 
-.section-content {
-    position: relative;
-    z-index: 1;
-    width: min(980px, 100%);
-}
-
 h1,
 h2,
 h3,
@@ -169,6 +66,21 @@ p,
 label,
 li {
     color: #ffffff;
+}
+
+.section-home h1,
+.section-home h2,
+.section-home h3,
+.section-home p,
+.section-home li,
+.section-home label,
+.section-home a {
+    color: #1b1b1b;
+}
+
+.section-home .pillar,
+.section-home .location-list .address-card {
+    border-top-color: rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -186,51 +98,13 @@ p {
     font-size: 1.05rem;
 }
 
-.pillars {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
-    margin-top: 32px;
-}
-
-.pillar {
-    border-top: 2px solid rgba(255, 255, 255, 0.45);
-    padding-top: 20px;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 36px;
-    margin-top: 24px;
-}
-
-.location-list {
-    list-style: none;
-    margin: 8px 0 0;
-    padding: 0;
-}
-
+.pillar,
 .location-list .address-card {
-    position: relative;
     border-top: 2px solid rgba(255, 255, 255, 0.45);
-    padding-top: 12px;
-    margin-top: 16px;
-    padding-left: 34px;
 }
 
 .location-list .address-card h3 {
     margin: 0 0 6px;
-}
-
-.location-list .address-card::before {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background: url('../multimedia/images/bdslab-grid.svg') no-repeat center / contain;
 }
 
 .location-list .address-card p {
@@ -292,17 +166,7 @@ p {
 }
 
 footer {
-    padding: 20px;
     background: #0f0f0f;
-}
-
-.footer-inner {
-    max-width: 1040px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
 }
 
 .footer-inner p {
@@ -322,33 +186,12 @@ footer {
     border: 0;
 }
 
-@media (max-width: 900px) {
-    .header-inner {
-        padding: 0 6%;
-        flex-wrap: wrap;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 12px 18px;
-    }
-
-    .language-switch {
-        margin-left: 0;
-    }
-}
-
 @media (max-width: 640px) {
-    .logo-header,
-    .logo-footer {
-        height: 32px;
-    }
-
-    .section {
-        padding: 110px 6% 60px;
-    }
-
     p {
         font-size: 1rem;
+    }
+
+    #contact-form button {
+        width: 100%;
     }
 }

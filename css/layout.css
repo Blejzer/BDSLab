@@ -1,0 +1,232 @@
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    position: relative;
+}
+
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 16px 0;
+    background: rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(2px);
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-nav.scrolled {
+    background: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 clamp(20px, 6vw, 10%);
+}
+
+.logo {
+    width: auto;
+}
+
+.logo-header {
+    height: 44px;
+}
+
+.logo-footer {
+    height: 40px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.primary-nav ul {
+    display: flex;
+    list-style: none;
+    gap: clamp(12px, 2vw, 24px);
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.language-switch {
+    margin-left: auto;
+}
+
+.section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 96px clamp(20px, 6vw, 10%) 80px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+.section-video {
+    background: transparent;
+}
+
+.section.section-video,
+.section.section-video.visible {
+    transform: none;
+}
+
+.section-video video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.section-video.visible video {
+    opacity: 1;
+}
+
+.section-content {
+    position: relative;
+    z-index: 1;
+    width: min(980px, 100%);
+}
+
+.pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 32px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 36px;
+    margin-top: 24px;
+}
+
+.location-list {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+}
+
+.location-list .address-card {
+    position: relative;
+    padding-top: 12px;
+    margin-top: 16px;
+    padding-left: 34px;
+}
+
+.location-list .address-card::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url('../multimedia/images/bdslab-grid.svg') no-repeat center / contain;
+}
+
+footer {
+    padding: 20px;
+}
+
+.footer-inner {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.35);
+        color: #fff;
+        font-size: 1.35rem;
+        line-height: 1;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    .language-switch {
+        margin-left: 0;
+    }
+
+    .primary-nav {
+        position: fixed;
+        top: 76px;
+        right: 20px;
+        left: 20px;
+        background: rgba(8, 8, 8, 0.96);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        padding: 16px;
+        transform: translateY(-16px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .primary-nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .site-nav.mobile-menu-open .primary-nav {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .logo-header,
+    .logo-footer {
+        height: 32px;
+    }
+
+    .section {
+        min-height: auto;
+        padding: 110px 20px 60px;
+    }
+
+    .pillars,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .location-list .address-card {
+        padding-left: 30px;
+    }
+}
