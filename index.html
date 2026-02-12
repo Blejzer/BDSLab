@@ -4,28 +4,68 @@
     <meta charset="UTF-8">
     <title>BDS Lab — Business Decision Systems</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="BDS Lab designs automation and AI-supported business decision systems for complex and regulated environments.">
+    <meta name="description"
+          content="BDS Lab designs automation and AI-supported business decision systems for complex and regulated environments.">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-
-<header>
+<header class="site-nav" id="site-nav">
     <div class="header-inner">
-        <div class="brand">BDS Lab</div>
-        <nav>
-            <a href="#home" data-page="home">Home</a>
-            <a href="#about" data-page="about">About</a>
-            <a href="#contact" data-page="contact">Contact</a>
+        <a href="#home" data-key="navHome"><img src="multimedia/images/bdslab-main.png" alt="BDS Lab" class="logo logo-header"></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+        <nav aria-label="Primary navigation" class="primary-nav" id="primary-nav">
+            <ul>
+                <li><a href="#home" data-key="navHome">Home</a></li>
+                <li><a href="#automation" data-key="navAutomation">Automation & Robotics</a></li>
+                <li><a href="#ai" data-key="navAiTools">AI Tools</a></li>
+                <li><a href="#about" data-key="navAbout">About</a></li>
+                <li><a href="#contact" data-key="navContact">Contact</a></li>
+            </ul>
         </nav>
+        <div class="language-switch">
+            <label for="language-select" class="visually-hidden">Language</label>
+            <select id="language-select" aria-label="Language selector">
+                <option value="en">English</option>
+                <option value="hr">Hrvatski</option>
+            </select>
+        </div>
     </div>
 </header>
 
-<main id="app"></main>
+<main>
+    <section id="home" class="section section-home">
+        <div class="section-content" data-section-content="home"></div>
+    </section>
+
+    <section id="automation" class="section section-video section-automation">
+        <video autoplay muted loop playsinline>
+            <source src="multimedia/video/home_web.mp4" type="video/mp4">
+        </video>
+        <div class="section-content" data-section-content="automation"></div>
+    </section>
+
+    <section id="ai" class="section section-ai">
+        <div class="section-content" data-section-content="ai"></div>
+    </section>
+
+    <section id="about" class="section section-video section-about">
+        <video autoplay muted loop playsinline>
+            <source src="multimedia/video/automation1_web.mp4" type="video/mp4">
+        </video>
+        <div class="section-content" data-section-content="about"></div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+        <div class="section-content" data-section-content="contact"></div>
+    </section>
+</main>
 
 <footer>
-    © 2026 · BDS Lab · Business Decision Systems
+    <div class="footer-inner">
+        <img src="multimedia/images/bdslab.svg" alt="BDS Lab" class="logo logo-footer">
+        <p>© 2026 · BDS Lab · Business Decision Systems</p>
+    </div>
 </footer>
 
 <script src="js/pages.js"></script>
